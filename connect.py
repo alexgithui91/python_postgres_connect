@@ -5,7 +5,7 @@ from config import config
 def connect():
     """Connect to PostgreSQL DB Server"""
     conn = None
-    
+
     try:
         # read connection params
         params = config()
@@ -19,7 +19,7 @@ def connect():
 
         # execute a statement
         print("PostgreSQL database version:")
-        cur.execute("SELECT version();")
+        curr.execute("SELECT version();")
 
         # display the PostgreSQL database server version
         db_version = curr.fetchone()
